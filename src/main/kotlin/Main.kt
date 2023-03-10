@@ -1,4 +1,11 @@
 fun main(args: Array<String>) {
-    val studentStatus = { name: String, auraColour: String -> "$name has a $auraColour face color"}
-    println(studentStatus("Mike", "red"))
+    val student: Student = Student();
+    println(student.name)
+}
+
+class Student {
+    val name = "Mike"
+        get() {
+           return field.replaceFirstChar { c -> c.uppercaseChar() }
+        }
 }
